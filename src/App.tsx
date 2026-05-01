@@ -1,5 +1,6 @@
 import "./App.css";
 import Accordion from "./components/Accordion";
+import TodoList from "./components/TodoList";
 
 function App() {
   const data = [
@@ -9,7 +10,8 @@ function App() {
   ];
   return (
     <>
-      <Accordion data={data} />
+      {/* <Accordion data={data} /> */}
+      <TodoList />
     </>
   );
 }

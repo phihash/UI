@@ -9,12 +9,14 @@ export default function Accordion({ data }: { data: Item[] }) {
 
   return (
     <>
-      {data.map((element) => (
-        <>
-          <div key={element.id}>{element.title}</div>
-          <p>{element.contents}</p>
-        </>
-      ))}
+      {data.map(({ id, title, contents }) => {
+        const isOpen = openSections.has(id);
+        return (
+          <>
+            <p>{id}</p>
+          </>
+        );
+      })}
     </>
   );
 }
